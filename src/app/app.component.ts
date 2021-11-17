@@ -10,13 +10,13 @@ export class AppComponent implements OnInit {
   title = 'energy';
 
   constructor(private deviceDetector: DeviceDetector) {
-    
+
   }
 
   ngOnInit() {
     this.deviceDetector.widthChange.emit(document.documentElement.clientWidth);
-  
   }
+
   @HostListener('window:resize', ['$event'])
   onResize() {
     this.deviceDetector.widthChange.emit(document.documentElement.clientWidth);

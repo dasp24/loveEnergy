@@ -1,0 +1,20 @@
+<div>
+<table [ngClass]="{'mobile_view': deviceDetector.isMobile}" class="table">
+    <tr class="table_header">
+      <th  [ngClass]="{'full-width':deviceDetector.isMobile}"><h4>Water Supplier</h4></th>
+      <th *ngIf="!deviceDetector.isMobile"><h4>Description</h4></th>
+      <th *ngIf="!deviceDetector.isMobile"><h4>Water Comparison</h4></th>
+    </tr>
+    <tr [ngClass]="{'flex_column': deviceDetector.isMobile}"*ngFor="let supplier of supplierArray">
+      <td><img class="image" [src]="supplier.url"></td>
+      <td>{{supplier.description}}</td>
+      <td class="link" >{{supplier.link}}</td>
+    </tr>
+    <tr *ngIf="deviceDetector.isMobile" class="full-width">
+        <th class="show_suppliers">Show all suppliers +</th>
+    </tr>
+  </table>
+  <span *ngIf="!deviceDetector.isMobile" class="full-width show_suppliers">
+    <p class="show_suppliers">Show all suppliers +</p>
+  </span>
+</div>

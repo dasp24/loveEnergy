@@ -1,0 +1,45 @@
+.table_header {
+    background-color: rgb(26, 21, 21);
+    color: white;
+}
+
+.table { 
+    width: 100%;
+    text-align: center;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f3eaea;
+}
+
+.image {
+    width: 150px;
+}
+
+.full-width{
+ width: 100%;
+
+} 
+
+.flex_column {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile_view td {
+    border-top: none;
+}
+
+.link {
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.show_suppliers {
+    color: white;
+    background-color: rgb(6, 7, 24);
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    padding: 12px 0;
+}

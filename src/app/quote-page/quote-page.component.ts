@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 
 
 @Component({
@@ -29,7 +29,7 @@ export class QuotePageComponent implements OnInit {
     return this.quoteForm.controls;
   }
 
-  submitForm() {
+  submitForm(): void {
     console.log('form has nowhere to go, reset form');
     this.createFormControls();
   }

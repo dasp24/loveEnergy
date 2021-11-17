@@ -1,22 +1,21 @@
-<p class="bold title center">Here’s some of the reasons why you should switch your water supply</p>
-<span 
-*ngIf="deviceDetector.isMobile">
-    <ngb-carousel
-    class="carousel"
-    [showNavigationIndicators]="false"
-    [keyboard]="true">
-        <ng-template ngbSlide *ngFor="let reason of reasonsArray" >
-            <img class="icon" [src]="reason.imageUrl">
-            <p class="bold">{{reason.title}}</p>
-            <p>{{reason.body}}</p>
-        </ng-template>
-    </ngb-carousel>
-</span>
-<span *ngIf="!deviceDetector.isMobile"
-class="quarter-container">
-        <div ngbSlide *ngFor="let reason of reasonsArray"class="quarter-block icon_container" >
-            <img class="icon" [src]="reason.imageUrl">
-            <p class="bold">{{reason.title}}</p>
-            <p>{{reason.body}}</p>
-        </div>
-</span>
+<div class="why_container"><p class="bold title center">Here’s some of the reasons why you should switch your water supply</p>
+    <span *ngIf="deviceDetector.isMobile">
+        <ngb-carousel
+        class="carousel"
+        [showNavigationIndicators]="false"
+        [keyboard]="true">
+            <ng-template ngbSlide *ngFor="let reason of reasonsArray" >
+                <img class="icon" [src]="reason.imageUrl">
+                <p class="bold">{{reason.title}}</p>
+                <p>{{reason.body}}</p>
+            </ng-template>
+        </ngb-carousel>
+    </span>
+    <span *ngIf="!deviceDetector.isMobile" class="quarter-container">
+            <div ngbSlide *ngFor="let reason of reasonsArray"class="quarter-block icon_container" >
+                <img class="icon" [src]="reason.imageUrl">
+                <p class="bold">{{reason.title}}</p>
+                <p>{{reason.body}}</p>
+            </div>
+    </span>
+</div>

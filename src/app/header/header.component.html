@@ -6,13 +6,10 @@
             [attr.aria-hidden]="!isMenuOpen && deviceDetector.isMobile">
                 <img class="bars "src="assets/bars-solid.svg">
             </a>
-      
         </div>
-        <!-- <app-basket-dropdown *ngIf="!basketService.hideBasketDropdown">
-        </app-basket-dropdown> -->
       </div>
     <img src="assets/love-energy-savings-logo.png">
-    <span class="list_items" >
+    <span class="list_items">
         <div class="item" *ngFor="let item of headerItems">
             {{item}}
         </div>
@@ -20,14 +17,13 @@
     <span class="contact_number">0800 9888 375</span>
     <span [attr.aria-hidden]="!deviceDetector.isDesktop"
     class="phone_icon" >
-        <img 
-            src="assets/phone-alt-solid.svg">
+        <img src="assets/phone-alt-solid.svg">
     </span>
 </div>
 
 <ng-container *ngIf="isMenuOpen && deviceDetector.isMobile" >
-        <ul
-        class="list_items_open">
-            <li *ngFor="let item of headerItems">{{item}}</li>
-        </ul>
+    <ul
+    class="list_items_open">
+        <li *ngFor="let item of headerItems">{{item}}</li>
+    </ul>
 </ng-container>
