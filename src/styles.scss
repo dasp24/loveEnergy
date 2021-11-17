@@ -7,6 +7,22 @@ html {
       font-family: Roboto;
   }
 
+  .title {
+    color: #346bd3;
+}
+
+.p .a {
+  font-size: 12px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.center {
+  text-align: center;
+}
+
   .half-container {
     display: flex;
     width: 100%;
@@ -46,3 +62,28 @@ html {
       }
     }
   }
+
+    .quarter-container {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: flex-end;
+    
+      &--flexstart {
+        align-items: flex-start;
+      }
+    
+      @media(max-width:$screen-a) {
+        flex-direction: column;
+      }
+    
+      &>.quarter-block {
+        width:calc(1/4*100% - (1 - 1/4)*#{$spacer-a});
+    
+        @media(max-width: $screen-a) {
+          width: 100%;
+          padding: 0 0 1% 0;
+        }
+      }
+    }
+  

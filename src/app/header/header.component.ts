@@ -17,7 +17,6 @@ export class HeaderComponent implements OnInit {
   }
 
   toggleNav(): void {
-    console.log(this.deviceDetector.isDesktop)
     this.isMenuOpen = !this.isMenuOpen;
   }
 

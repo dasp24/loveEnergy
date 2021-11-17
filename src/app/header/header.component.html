@@ -3,7 +3,7 @@
         <div>
             <a (click)="toggleNav()"
             class="header__navigation-link display-burger"
-            [attr.aria-hidden]="!isMenuOpen && !deviceDetector.isDesktop">
+            [attr.aria-hidden]="!isMenuOpen && deviceDetector.isMobile">
                 <img class="bars "src="assets/bars-solid.svg">
             </a>
       
@@ -21,13 +21,12 @@
     <span [attr.aria-hidden]="!deviceDetector.isDesktop"
     class="phone_icon" >
         <img 
-           
             src="assets/phone-alt-solid.svg">
     </span>
 </div>
 
-<ng-container *ngIf="isMenuOpen" >
-        <ul [attr.aria-hidden]="!deviceDetector.isDesktop"
+<ng-container *ngIf="isMenuOpen && deviceDetector.isMobile" >
+        <ul
         class="list_items_open">
             <li *ngFor="let item of headerItems">{{item}}</li>
         </ul>
