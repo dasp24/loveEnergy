@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+@import './app/scss/variables.scss';
+html {
+    font-family: Roboto;
+  }
+
+  .h1 .h2 .h3 .p .a .input {
+      font-family: Roboto;
+  }
+
+  .half-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+  
+    @media(max-width: $screen-a) {
+      flex-direction: column;
+    }
+  
+    &--start {
+      align-items: flex-start;
+    }
+  
+    &--tb-margin {
+      margin: $spacer-a 0;
+    }
+  
+    &>.half-block {
+      width:calc(1/2*100% - (1 - 1/2)*#{$spacer-a});
+      position: relative;
+  
+      @media(max-width: $screen-a) {
+        width: 100%;
+        margin: 0 0 $spacer-a/2 0;
+        ;
+      }
+    }
+  
+    &--ipad-break {
+      @media(max-width: $ui-width-ipad) {
+        flex-direction: column;
+  
+        & .half-block {
+          width: 100%;
+        }
+      }
+    }
+  }

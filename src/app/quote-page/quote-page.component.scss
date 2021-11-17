@@ -1,0 +1,65 @@
+
+.title {
+    color: #346bd3;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.quote_text {
+    background-color: #f1e8e8;
+}
+
+.logo {
+    width: 150px;
+    padding: 15px;
+}
+
+.input-box {
+    width: 194px;
+    height: 30px;
+    margin-bottom: 15px;
+    border-radius: 2px;
+    border-style: none;
+}
+
+.submit {
+    width: 194px;
+    height: 30px;
+    background-color: red;
+    color: white;
+    border-style: none;
+
+
+}
+
+.quote_form {
+    background-color: #000102;
+    color: white;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+}
+
+.small_text {
+    font-size: 10px;
+    padding: 10px;
+}
+
+.disabled {
+    background-color: grey;
+}
+
+.error {
+    border-color: red;
+    border-radius: 2px;
+    border-bottom: red 2px solid;
+}
+
+.link {
+    text-decoration: underline;
+}
+

@@ -1,0 +1,51 @@
+<div class="half-container quote_text">
+    <div class="half-block">
+
+        <h2 class="title">Save money for your business by switching water supplier</h2>
+
+        <p class="bold">
+        Since 2017, UK businesses, charities and public sector organisations have been able to choose who
+        supplies their water, meaning they can now avoid being locked into costly contracts.</p>
+        <p>
+        If your business still hasn’t switched, you could make significant savings by comparing water
+        suppliers to find a better deal.
+        </p>
+        <p>
+        At Love Energy Savings, we are committed to guiding you through the process of switching water
+        supplier to help you find the very best deal for your business.
+        </p>
+        <img class="logo love_water" src="assets/love-water-savings-logo.png">
+        <img class="logo trust_pilot"
+        src="assets/trust-pilot-logo.svg">
+    </div>
+    <div class="half-block">
+        <div class="quote_form">
+    <h2>Request a quote</h2>
+    <!-- here is the form box -->
+    <form [formGroup]="quoteForm">
+        <div class="form-group">
+          <input class="form-control input-box" 
+          placeholder="Name*"
+        [ngClass]="{'error': f.name.invalid && f.name.touched}"
+          formControlName="name">
+        <br>
+        <input class="form-control input-box" 
+        placeholder="Phone Number*"
+        [ngClass]="{'error': f.phoneNumber.invalid && f.phoneNumber.touched}"
+        formControlName="phoneNumber">
+        <br>
+        <input class="form-control input-box" 
+        placeholder="Email Address*"
+        [ngClass]="{'error': f.email.invalid && f.email.touched}"
+        formControlName="email">
+           
+        </div>
+      </form>
+      <button type="submit" (click)="submitForm()" [disabled]="quoteForm.status !== 'VALID'" [ngClass]="{'disabled': quoteForm.status === 'INVALID'}" class="submit" >Submit</button>
+
+    <p class="small_text">By submitting your details, you are agreeing to Love Energy Savings <a class="link">terms & conditions</a>. For more
+    information please visit our <a class="link">privacy policy</a>.
+</p>
+    </div>
+</div>
+</div>
